@@ -35,9 +35,9 @@ def randomize_array(arr):
         arr.remove(elem)
     return sampled_arr
 
-st.set_page_config(page_title="GPTflix", page_icon="🍿", layout="wide")
+st.set_page_config(page_title="Lawbot", page_icon="🍿", layout="wide")
 
-st.header("GPTflix is like chatGPT for movie reviews!🍿\n")
+st.header("LAWBOT line 1")
 
 
 # st.header("Thanks for visiting GPTflix! It's been a fun experiment, with over 4000 unique users over four weeks and an average of 10 questions per user while the site was online! Perhaps we will be back some time...🍿\n")
@@ -63,7 +63,7 @@ EMBEDDING_MODEL = "text-embedding-ada-002"
 
 COMPLETIONS_API_PARAMS = {
     # We use temperature of 0.0 because it gives the most predictable, factual answer.
-    "temperature": 0.0,  
+    "temperature": 0.2,  
     "max_tokens": 400,
     "model": COMPLETIONS_MODEL,
 }
@@ -77,24 +77,20 @@ github_url = "https://github.com/stephansturges/GPTflix"
 with st.sidebar:
     st.markdown("# About 🙌")
     st.markdown(
-        "GPTflix allows you to talk to version of chatGPT \n"
-        "that has access to reviews of about 10 000 movies! 🎬 \n"
-        "Holy smokes, chatGPT and 10x cheaper??! We are BACK! 😝\n"
+        "LINE 2"
         )
     st.markdown(
-        "Unline chatGPT, GPTflix can't make stuff up\n"
-        "and will only answer from injected knowlege 👩‍🏫 \n"
+        "LINE 3"
     )
     st.markdown("---")
-    st.markdown("A side project by Stephan Sturges")
-    st.markdown("Kept online by [Ben's Bites](%s)!" %bb_url)
-    st.image(bens_bites_logo, width=60)
+    st.markdown("LINE4")
+    st.markdown("LINE5")
 
     st.markdown("---")
-    st.markdown("Tech [info](%s) for you nerds out there!" %tech_url)
-    st.markdown("Give feedback [here](%s)" %feedback_url)
+    st.markdown("LINE6Tech [info](%s) for you nerds out there!" %tech_url)
+    st.markdown("LINE7Give feedback [here](%s)" %feedback_url)
     st.markdown("---")
-    st.markdown("Code open-sourced [here](%s)" %github_url)
+    st.markdown("LINE8Code open-sourced [here](%s)" %github_url)
     st.markdown("---")
 
 
@@ -137,7 +133,7 @@ def construct_prompt_pinecone(question):
 
     #print(xq)
 
-    res = pineconeindex.query([xq], top_k=30, include_metadata=True, namespace="movies")
+    res = pineconeindex.query([xq], top_k=30, include_metadata=True, namespace="uday")
 
     #print(res)
     # print(most_relevant_document_sections[:2])
