@@ -12,7 +12,7 @@ from PIL import Image
 
 pinecone_api_key = st.secrets["API_KEYS"]["pinecone"]
 
-pinecone.init(api_key=pinecone_api_key, environment="us-east1-gcp")
+pinecone.init(api_key=pinecone_api_key, environment="asia-northeast1-gcp")
 
 openai.api_key = st.secrets["API_KEYS"]["openai"]
 
