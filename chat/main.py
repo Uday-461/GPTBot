@@ -43,7 +43,7 @@ st.header("GPTflix is like chatGPT for movie reviews!🍿\n")
 # st.header("Thanks for visiting GPTflix! It's been a fun experiment, with over 4000 unique users over four weeks and an average of 10 questions per user while the site was online! Perhaps we will be back some time...🍿\n")
 
 # Define the name of the index and the dimensionality of the embeddings
-index_name = "400kmovies"
+index_name = "uday"
 dimension = 1536
 
 pineconeindex = pinecone.Index(index_name)
